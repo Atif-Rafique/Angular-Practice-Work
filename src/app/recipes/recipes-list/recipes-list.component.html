@@ -1,0 +1,20 @@
+<div class="row">
+    <div class="col-lg-12">
+        <button type="button" class="btn btn-primary shadow-none">Add Recipe</button>
+    </div>
+</div>
+<hr>
+<div class="row mt-4">
+    <div class="col-lg-12">
+        <a href="#" class="list-group-item clearfix d-flex flex-wrap gap-3 for-shadow mt-3 py-3" *ngFor="let recipe of recipes">
+            <div class="me-auto">
+                <h4 class="list-grouping-item-heading">{{recipe.Name}}</h4>
+                <p class="list-group-item-text">{{recipe.Description}}</p>
+            </div>
+            <span class="ms-auto">
+                <img [src]="recipe.ImagePath" alt="Image Missing" class="img-responsive for-img" style="max-height: 100px;">
+            </span>
+        </a>
+        <app-recipe-item></app-recipe-item>
+    </div>
+</div>

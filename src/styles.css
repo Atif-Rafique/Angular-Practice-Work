@@ -1,0 +1,67 @@
+/* You can add global styles to this file, and also import other style files */
+
+:root {
+    --navbar-background-color: rgba(199, 199, 199, 0.726);
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box !important;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* ################################ Header Styling ################################ */
+
+.g-navbar {
+    background-color: var(--navbar-background-color);
+}
+
+.nav-select-div {
+    padding: 10px 20px !important;
+    border-radius: 6px;
+    transition: all 0.2s ease-in-out;
+}
+
+.nav-select-div:hover {
+    padding: 10px 20px !important;
+    background-color: coral;
+    transform: translateY(-3px);
+    /* box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35); */
+    cursor: pointer;
+}
+
+
+/* Shadow on Div */
+
+.for-shadow {
+    border-radius: 15px !important;
+    background-color: #fafafa;
+    transition: all 0.2s ease-in-out;
+}
+
+.for-shadow:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    cursor: pointer;
+}
+
+
+/* Image On Hover */
+
+.for-img {
+    border-radius: 5px !important;
+    transition: all 0.2s ease-in-out;
+}
+
+.for-img:hover {
+    /* transform: translateY(-10px); */
+    transform: scale(1.15);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    cursor: pointer;
+}

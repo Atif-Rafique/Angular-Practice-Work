@@ -1,0 +1,39 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12 my-4">
+            <div>
+                <h3>Data Binding</h3><br>
+                <p>This is <span style="font-weight: bolder;">{{serverName}}</span></p><br>
+                <p class="fw-bold">Property Binding</p>
+
+                <input type="text" class="form-control" [value]="PropertyBinding">
+                <br>
+                <p class="fw-bold">Input Event Binding</p>
+                <!-- ng build --prod --base-href "https://github.com/Atif910/Angular-Practice-23-02-2022.git" -->
+
+                <input type="text" class="form-control" (input)="onInput($event)"><br>
+                <p>{{PropertyBindingString}}</p><br>
+
+                <p class="fw-bold">Two Way Data Binding</p>
+                <input type="text" class="form-control" [(ngModel)]="PropertyBinding"><br>
+            </div>
+        </div>
+    </div>
+
+    <!-- create server row -->
+    <div class="row">
+        <div class="col-lg-12">
+            <div>
+                <button type="button" class="btn btn-primary" (click)="onAddServer(PropertyBinding)" [disabled]="myDisabledbtn">Add Server</button>
+            </div>
+            <p *ngFor="let servername of serverList;index as i; even as isEven" [ngStyle]="{background: isEven ? 'Yellow' : 'grey'}">
+                List: {{i +'&nbsp;'+ servername}}</p>
+            <p class="mt-2" *ngIf="!serverFound; else elseblock">Server was not Added</p>
+
+            <ng-template #elseblock>
+                <p>Server Has been Created Successfully</p>
+            </ng-template>
+            <p [ngStyle]="{backgroundColor:pickColor()}" [ngClass]="{offlineClass: serverStatus === 'offline',onlineClass:serverStatus==='online'}">Server is {{serverStatus}}</p>
+        </div>
+    </div>
+</div>

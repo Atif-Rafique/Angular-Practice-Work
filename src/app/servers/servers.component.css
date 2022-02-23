@@ -1,0 +1,15 @@
+.offlineClass {
+    background-color: crimson;
+    color: #fff;
+    padding: 10px;
+}
+
+.onlineClass {
+    background-color: darkorchid;
+    color: #fff;
+    padding: 10px;
+}
+
+.rowEvenBgColor {
+    background-color: darkmagenta;
+}
